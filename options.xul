@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<!--
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this file,
+You can obtain one at http://mozilla.org/MPL/2.0/.
+-->
+<!DOCTYPE vbox SYSTEM "chrome://terrace/locale/options.dtd">
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<setting pref="extensions.terrace.time.notation" type="radio" title="&terrace.options.time.notation;">
+		<radiogroup orient="horizontal">
+			<radio label="12 hour" value="0" />
+			<radio label="24 hour" value="1" />
+		</radiogroup>
+	</setting>
+	<setting pref="extensions.terrace.collection.type" type="radio" title="&terrace.options.collection.type;">
+		<radiogroup orient="horizontal">
+			<radio label="collection" value="0" />
+			<radio label="all" value="1" />
+		</radiogroup>
+	</setting>
+	<setting pref="extensions.terrace.foreground.opacity" type="integer" title="&terrace.options.foreground.opacity;" max="100" min="0" increment="10" size="2" />
+	<setting pref="extensions.terrace.collection" type="menulist" title="&terrace.options.collection;">
+		<menulist sizetopopup="always">
+			<menupopup>
+				<menuitem label="Nature" value="332379" />
+				<menuitem label="Roads and Paths" value="315652" />
+				<menuitem label="Assorted" value="397031" />
+				<menuitem label="Subtle" value="397034" />
+				<menuitem label="Caffeine" value="397046" />
+				<menuitem label="Designed" value="397054" />
+			</menupopup>
+		</menulist>
+	</setting>
+</vbox>

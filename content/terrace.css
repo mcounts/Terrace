@@ -1,0 +1,61 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+body {
+	font: message-box;
+	height: 100%;
+	display: flex;
+	margin: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background: #ccc;
+}
+
+html, body, #unsplash-container {
+	width: 100%;
+	height: 100%;
+}
+
+#unsplash-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-size: cover;
+}
+
+#date-container {
+	border: solid 8px #fff;
+	box-sizing: border-box;
+	margin: -48px 0 0 -85px;
+	padding: 10px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 94px;
+	width: 170px;
+	text-align: center;
+}
+
+#date-text {
+	color: #fff;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+	#date-container {
+		margin: -68px 0 0 -125px;
+		height: 136px;
+		width: 250px;
+		border: solid 12px #fff;
+	}
+
+	#date-text {
+		font-size: 74px;
+	}
+}
+
+
+

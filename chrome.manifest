@@ -1,0 +1,3 @@
+content terrace content/
+locale terrace en-US locale/en-US/
+override chrome://browser/content/newtab/newTab.xhtml chrome://terrace/content/terrace.xhtml
