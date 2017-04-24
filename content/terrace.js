@@ -41,23 +41,26 @@ var terrace = {};
     var m = today.getMinutes();
     var s = today.getSeconds();
     var separator;
-    if(s % 2 === 0) {
-      separator = ':';
-    } else {
-      separator = ' ';
-    }
+    document.getElementById('separator_symbol').classList.toggle('hide-separator');
     m = checkTime(m);
 
-    var displayTime = h + separator + m;
+    var theDivHour = document.getElementById('date-text-hour');
+    var theDivMinute = document.getElementById('date-text-minute');
 
-    var theDiv = document.getElementById('date-text');
-    var content = document.createTextNode(displayTime);
+    var contenthour = document.createTextNode(h);
+    var contentMinute = document.createTextNode(m);
 
-    while (theDiv.firstChild) {
-      theDiv.removeChild(theDiv.firstChild);
+    while (theDivHour.firstChild) {
+      theDivHour.removeChild(theDivHour.firstChild);
     }
 
-    theDiv.appendChild(content);
+    theDivHour.appendChild(contenthour);
+
+    while (theDivMinute.firstChild) {
+      theDivMinute.removeChild(theDivMinute.firstChild);
+    }
+
+    theDivMinute.appendChild(contentMinute);
   };
 
   updateTime();

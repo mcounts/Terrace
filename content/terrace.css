@@ -38,7 +38,9 @@ html, body, #unsplash-container {
 	text-align: center;
 }
 
-#date-text {
+#date-text-hour,
+#date-text-minute,
+#separator_symbol {
 	color: #fff;
 	font-size: 48px;
 	font-weight: bold;
@@ -52,8 +54,17 @@ html, body, #unsplash-container {
 		border: solid 12px #fff;
 	}
 
-	#date-text {
+	#date-text-hour,
+	#date-text-minute,
+	#separator_symbol {
 		font-size: 74px;
+	}
+
+	#separator_symbol {
+		width: 15px;
+	}
+	.hide-separator {
+		opacity: 0;
 	}
 }
 
