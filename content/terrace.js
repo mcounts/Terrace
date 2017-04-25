@@ -41,9 +41,14 @@ var terrace = {};
     var m = today.getMinutes();
     var s = today.getSeconds();
     var separator;
-    document.getElementById('separator_symbol').classList.toggle('hide-separator');
-    m = checkTime(m);
 
+    if(s % 2 === 0) {
+      document.getElementById('separator_symbol').classList.add('hide-separator');
+    } else {
+      document.getElementById('separator_symbol').classList.remove('hide-separator');
+    }
+
+    m = checkTime(m);
     var theDivHour = document.getElementById('date-text-hour');
     var theDivMinute = document.getElementById('date-text-minute');
 
