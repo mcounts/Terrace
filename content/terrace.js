@@ -9,11 +9,11 @@ Components.utils.import('resource://gre/modules/XPCOMUtils.jsm');
 var terrace = {};
 
 (function() {
-	XPCOMUtils.defineLazyGetter(terrace, 'prefs', function() {
-		return Services.prefs.getBranch('extensions.terrace.');
-	});
+  XPCOMUtils.defineLazyGetter(terrace, 'prefs', function() {
+    return Services.prefs.getBranch('extensions.terrace.');
+  });
 
-	var opacity =
+  var opacity =
     Math.max(0, Math.min(100, terrace.prefs.getIntPref('foreground.opacity')));
   var timeNotation = terrace.prefs.getIntPref('time.notation');
   var collectionList = ['332379','315652','397031','397034','397046','397054']
@@ -22,12 +22,12 @@ var terrace = {};
     terrace.prefs.getIntPref('collection') :
     collectionList[Math.floor(Math.random()*collectionList.length)];
 
-	document.getElementById('date-container').style.opacity = opacity / 100;
+  document.getElementById('date-container').style.opacity = opacity / 100;
 
-	var checkTime = function(i) {
+  var checkTime = function(i) {
     if (i < 10) {i = '0' + i};
     return i;
-	};
+  };
 
   var updateTime = function() {
     var today = new Date();
@@ -69,7 +69,7 @@ var terrace = {};
   };
 
   updateTime();
-	var t = window.setInterval(updateTime, 500);
+  var t = window.setInterval(updateTime, 500);
 
   var collections = {
     332379: [

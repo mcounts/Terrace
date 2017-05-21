@@ -29,7 +29,7 @@ html, body, #unsplash-container {
 	border: solid 8px #fff;
 	box-sizing: border-box;
 	margin: -48px 0 0 -85px;
-	padding: 10px;
+	padding: 10px 0px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -45,12 +45,19 @@ html, body, #unsplash-container {
 	font-size: 48px;
 	font-weight: bold;
 }
+.separator-spacing-fix {
+	opacity:0;
+	width:0px;
+	opacity: 0;
+	padding: 0px;
+	margin-left: -35px;
+}
 
 @media only screen and (min-width: 768px) {
 	#date-container {
 		margin: -68px 0 0 -125px;
 		height: 136px;
-		width: 250px;
+		width: 260px;
 		border: solid 12px #fff;
 	}
 
@@ -69,6 +76,3 @@ html, body, #unsplash-container {
 		opacity: 0;
 	}
 }
-
-
-
